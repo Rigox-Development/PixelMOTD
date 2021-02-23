@@ -7,7 +7,7 @@
 #
 #   Using version 9.0.0-SNAPSHOT
 #   Original author: MrUniverse44
-#   Maintained by: sebastnchan
+#   Maintained by: sebastnchan (with help from MrUniverse44)
 #   Discord support on https://rigox.club/development
 #
 normal:
@@ -133,7 +133,7 @@ whitelist:
       # If you want to change protocol when a player tries
       # to join on a incompatible version, keep it false.
       # Instead will display protocol name always.
-      change-protocol-version: false
+      change-protocol-version: true
       # Custom protocol name to set if enabled.
       name: Whitelist PixelMOTD
   #

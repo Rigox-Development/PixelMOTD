@@ -1,0 +1,86 @@
+#   _____ _          _ __  __  ____ _______ _____
+#   |  __ (_)        | |  \/  |/ __ \__   __|  __ \
+#   | |__) |__  _____| | \  / | |  | | | |  | |  | |
+#   |  ___/ \ \/ / _ \ | |\/| | |  | | | |  | |  | |
+#   | |   | |>  <  __/ | |  | | |__| | | |  | |__| |
+#   |_|   |_/_/\_\___|_|_|  |_|\____/  |_|  |_____/
+#
+#   Using version 9.0.0-SNAPSHOT
+#   Original author: MrUniverse44
+#   Maintained by: sebastnchan (with help from MrUniverse44)
+#   Discord support on https://rigox.club/development
+#
+settings:
+  # Toggle Update Check from PixelMOTD to get notifications of new versions.
+  update-check: true
+  # Check for new Alpha versions from PixelMOTD
+  checkAlphaUpdates: true
+  # This username will be displayed when a player load the motd for first time and never joined to the server.
+  defaultUnknownUserName: UnknownPlayer
+# PixelMOTD Hooks
+hooks:
+  # Toggle PlaceholderAPI Support
+  PlaceholderAPI: false
+# PixelMOTD Event System
+events:
+  # This is an example of the event system
+  exampleEvent:
+    # This is the event name, you can get the name of this event in the motd with %event_exampleEvent_name%
+    eventName: Example Event
+    # This is the event date, the date need be (MM/dd/yy HH:mm:ss) to work correctly.
+    eventDate: 06/20/22 23:59:00
+    # This is the Time-Zone of the event, you can put your TimeZone to get a correct timeLeft
+    TimeZone: ECT
+    # This is the Format Type, In PixelMOTD you can select 3 Format Types.
+    # FIRST,SECOND,THIRD.
+    # First Preview: '18 minutes 34 seconds'
+    # Second Preview: '18:34'
+    # Third Preview: '18m, 34s.'
+    format-Type: FIRST
+    # This message will be displayed when the event date and time has passed
+    endMessage: '&cThe event finished.'
+# PixelMOTD Timing Editor
+# You can edit here all timings, for example if you are using the event-FormatType: FIRST, here you can edit timings.
+timings:
+  second: second
+  seconds: seconds
+  minute: minute
+  minutes: minutes
+  hour: hour
+  hours: hours
+  day: day
+  days: days
+  week: week
+  weeks: weeks
+# PixelMOTD Menu
+# This is a new feature only for Spigot version.
+# With this feature you can control more easier the PixelMOTD.
+menus:
+  admin:
+    name: '&8Admin Menu'
+    # The min size is 1 and the max size is 6.
+    rows: 1
+    items:
+      globalWhitelist:
+        name: '&eToggle Global Whitelist'
+        slot: 4
+        lore:
+          - '&8PixelMOTD'
+          - '&7Status: &b%status%'
+          - '&eClick to change'
+        enabled-item: WOOL:5
+        disabled-item: WOOL:14
+    fills:
+      first:
+        item: STAINED_GLASS_PANE:15
+        name: '&8PixelMOTD'
+        lore:
+          - '&8%version%'
+          - '&aCreated with &dlove&a.'
+        list:
+          # Types: IGNORE, ONLY
+          # With IGNORE all slots ignoring values will be filled with the item.
+          # With ONLY all values will be filled ignoring others slots.
+          type: IGNORE
+          values:
+            - 4
