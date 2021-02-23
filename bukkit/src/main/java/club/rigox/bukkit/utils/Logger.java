@@ -10,7 +10,7 @@ import java.util.List;
 public class Logger {
     /**
      * Colorize a string provided to method
-     * for proxies.
+     * for servers.
      *
      * @param message Message to transform.
      * @return transformed message with colors.
