@@ -1,7 +1,9 @@
 # Pixel MOTD
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/863f4a446ded43a9b3bf87d1ecf5eda3)](https://www.codacy.com/gh/sebastnchan/PixelMOTD/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sebastnchan/PixelMOTD&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/863f4a446ded43a9b3bf87d1ecf5eda3)](https://www.codacy.com/gh/Rigox-Development/PixelMOTD/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Rigox-Development/PixelMOTD&amp;utm_campaign=Badge_Grade)
 
 **WARNING** This is a *fully recoded* version of the original made by MrUniverse44, it will lack of features that have the original plugin.
+
+This project has been reworked by **Sebastnchan** with a lot of help by MrUniverse44.
 
 Pixel MOTD is a feature rich motd plugin that allows to server owners manage motd and players on a very simple way.
 
@@ -17,7 +19,7 @@ Features:
 * Better reload system
 * Center MoTD text
 * Better optimizations
-* Caledar MoTD
+* Calendar MoTD
 * Timer MoTD
  
 ## Wiki
