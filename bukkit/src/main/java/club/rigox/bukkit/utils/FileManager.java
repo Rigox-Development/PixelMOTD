@@ -9,9 +9,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 
-import static club.rigox.bukkit.utils.Logger.info;
-import static club.rigox.bukkit.utils.Logger.warn;
-
 @SuppressWarnings("ResultOfMethodCallIgnored")
 public class FileManager {
     private final PixelMOTD plugin;
@@ -37,11 +34,11 @@ public class FileManager {
         try {
             cnf = YamlConfiguration.loadConfiguration(configFile);
         } catch (Exception e) {
-            warn(String.format("A error occurred while loading the settings file. Error: %s", e));
+            plugin.getLogs().warn(String.format("A error occurred while loading the settings file. Error: %s", e));
             e.printStackTrace();
         }
 
-        info(String.format("&7File &e%s.yml &7has been loaded", configName));
+        plugin.getLogs().info(String.format("&7File &e%s.yml &7has been loaded", configName));
         return cnf;
     }
 
@@ -58,7 +55,7 @@ public class FileManager {
                 assert in != null;
                 Files.copy(in, file.toPath());
             } catch (IOException e) {
-                warn(String.format("A error occurred while copying the config %s to the plugin data folder. Error: %s", configName, e));
+                plugin.getLogs().warn(String.format("A error occurred while copying the config %s to the plugin data folder. Error: %s", configName, e));
                 e.printStackTrace();
             }
         }
@@ -73,7 +70,7 @@ public class FileManager {
             return YamlConfiguration.loadConfiguration(
                     new File(plugin.getDataFolder(), file + ".yml"));
         } catch (IOException e) {
-            warn(String.format("A error occurred while copying the config %s.yml to the plugin data folder. Error: %s", file, e));
+            plugin.getLogs().warn(String.format("A error occurred while copying the config %s.yml to the plugin data folder. Error: %s", file, e));
             e.printStackTrace();
         }
 

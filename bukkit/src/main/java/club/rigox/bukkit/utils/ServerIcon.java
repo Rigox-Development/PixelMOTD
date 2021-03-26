@@ -10,9 +10,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 
-import static club.rigox.bukkit.utils.Logger.warn;
-import static club.rigox.bukkit.utils.Logger.error;
-
 public class ServerIcon {
     private final PixelMOTD plugin;
 
@@ -38,7 +35,7 @@ public class ServerIcon {
             File iconPath = new File(plugin.getDataFolder(), directoryPrefix + "-icons/" + icon);
 
             if (!iconPath.exists()) {
-                warn("Favicon " + icon + " doesn't exists on " + directoryPrefix + "-icons folder! Creating one...");
+                plugin.getLogs().warn("Favicon " + icon + " doesn't exists on " + directoryPrefix + "-icons folder! Creating one...");
 
                 assert nullIcon != null;
                 Files.copy(nullIcon, iconPath.toPath());
@@ -49,10 +46,10 @@ public class ServerIcon {
             int width  = favicon.getWidth();
 
             if (height != 64 || width != 64) {
-                error("Icon is not a 64x64 resolution. Copying default icon...");
+                plugin.getLogs().error("Icon is not a 64x64 resolution. Copying default icon...");
 
                 if (!iconPath.renameTo(new File(iconPath + ".1"))) {
-                    error("Cannot rename file.");
+                    plugin.getLogs().error("Cannot rename file.");
                 }
 
                 assert nullIcon != null;
@@ -60,7 +57,7 @@ public class ServerIcon {
             }
 
         } catch (IOException e) {
-            error(String.format("Something weird happened while getting %s favicon. Error: %s", icon, e));
+            plugin.getLogs().error(String.format("Something weird happened while getting %s favicon. Error: %s", icon, e));
         }
 
         return favicon;

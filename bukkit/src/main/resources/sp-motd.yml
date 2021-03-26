@@ -22,6 +22,36 @@ normal:
       change-protocol-version: false
       # Custom protocol name to set if enabled.
       name: PixelMOTD
+    # Custom Online Players
+    custom-online-players:
+      # Enable custom online players
+      enable: false
+      # PixelMOTD have 5 types (for now):
+      # - EQUAL
+      # - ADD
+      # - CUSTOM-VALUES
+      # - HALF
+      # - HALF-ADD
+      # More information in https://www.spigotmc.org/wiki/pixelmotd/#pixelmotd-modes
+      mode: HALF-ADD
+      values:
+        - 2021
+        - 2022
+    # Custom Max Players
+    custom-max-players:
+      # Enable custom max players
+      enable: true
+      # PixelMOTD have 5 types (for now):
+      # - EQUAL
+      # - ADD
+      # - CUSTOM-VALUES
+      # - HALF
+      # - HALF-ADD
+      # More information in https://www.spigotmc.org/wiki/pixelmotd/#pixelmotd-modes
+      mode: HALF-ADD
+      values:
+        - 2021
+        - 2022
   #
   # MOTD FEATURE
   # You can add many motds as you want.
@@ -136,6 +166,36 @@ whitelist:
       change-protocol-version: true
       # Custom protocol name to set if enabled.
       name: Whitelist PixelMOTD
+    # Custom Online Players
+    custom-online-players:
+      # Enable custom online players
+      enable: false
+      # PixelMOTD have 5 types (for now):
+      # - EQUAL
+      # - ADD
+      # - CUSTOM-VALUES
+      # - HALF
+      # - HALF-ADD
+      # More information in https://www.spigotmc.org/wiki/pixelmotd/#pixelmotd-modes
+      mode: EQUAL
+      values:
+        - 2021
+        - 2022
+    # Custom Max Players
+    custom-max-players:
+      # Enable custom max players
+      enable: true
+      # PixelMOTD have 5 types (for now):
+      # - EQUAL
+      # - ADD
+      # - CUSTOM-VALUES
+      # - HALF
+      # - HALF-ADD
+      # More information in https://www.spigotmc.org/wiki/pixelmotd/#pixelmotd-modes
+      mode: ADD
+      values:
+        - 2021
+        - 2022
   #
   # MOTD FEATURE
   # You can add many motds as you want.
